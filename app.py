@@ -23,6 +23,24 @@ def fb():
     "results-sd": sd
     }
     return js
+@app.route('/api/vokal/halah', methods=['GET','POST'])
+def halah():
+	if request.args.get('text'):
+		text = str(request.args.get('text'))
+		kantal = text.replace('a', 'a').replace('A', 'A').replace('u', 'a').replace('U', 'A').replace('e', 'a').replace('E', 'A').replace('o', 'a').replace('O', 'A')
+		return { 'status': 200, 'result': kantal }
+	else:
+		return { 'status': False, 'pesan': 'Masukkan parameter text'}
+		
+		
+@app.route('/api/vokal/hilih', methods=['GET','POST'])
+def hilih():
+	if request.args.get('text'):
+		text = str(request.args.get('text'))
+		kintil = text.replace('a', 'i').replace('A', 'I').replace('u', 'i').replace('U', 'I').replace('e', 'i').replace('E', 'I').replace('o', 'i').replace('O', 'I')
+		return { 'status': 200, 'result': kintil }
+	else:
+		return { 'status': False, 'pesan': 'Masukkan parameter text'}
 
 @app.route('/nulis', methods=['GET'])
 def tulis():
