@@ -56,7 +56,7 @@ def tulis():
         par = {
          'key':'12c23589a949d7f05bb69ae1fc3c96c8',
          'image':image_64_encode,
-         'name':'nulis',
+         'name':'nulis_ferdiz-afk',
          'expiration': 60
          }
         headers = {
